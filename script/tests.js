@@ -11,6 +11,10 @@ function onReady() {
   var mockResult4 = [0,1,2,3,4,5,'end'];
   var mockArray5 = [1,3,6,1,2,3,4];
   var mockResult5 = [0,1,2,'end'];
+  var mockArray6 = [1,6,5,2,1,4,1,1,1];
+  var mockResult6 = [0,1,5,'end'];
+  var mockArray7 = [1,6,5,2,1,4,1,1,1,1];
+  var mockResult7 = [0,1,5,9,'end'];
 
   var expectElement = document.querySelector('.expect pre');
   expectElement.innerHTML += '<b>.generateArray(100, 5)</b> should return an <b>array </b><br/>';
@@ -21,6 +25,8 @@ function onReady() {
   expectElement.innerHTML += '<b>.calculateSteps(['+ mockArray3 +'])</b> should return <b>['+ mockResult3 +'] </b><br/>';
   expectElement.innerHTML += '<b>.calculateSteps(['+ mockArray4 +'])</b> should return <b>['+ mockResult4 +'] </b><br/>';
   expectElement.innerHTML += '<b>.calculateSteps(['+ mockArray5 +'])</b> should return <b>['+ mockResult5 +'] </b><br/>';
+  expectElement.innerHTML += '<b>.calculateSteps(['+ mockArray6 +'])</b> should return <b>['+ mockResult6 +'] </b><br/>';
+  expectElement.innerHTML += '<b>.calculateSteps(['+ mockArray7 +'])</b> should return <b>['+ mockResult7 +'] </b><br/>';
 
   var assertElement = document.querySelector('.assert pre');
   assertElement.innerHTML += 'Expected: <b>array</b>, got: <b>' + (Array.isArray(generateArray(100, 5)) ? 'array' : typeof generateArray(100, 5)) + '</b><br/>';
@@ -31,6 +37,8 @@ function onReady() {
   assertElement.innerHTML += 'Expected: <b>'+ mockResult3 +'</b>, got: <b>' + calculateSteps(mockArray3) +'</b><br/>';
   assertElement.innerHTML += 'Expected: <b>'+ mockResult4 +'</b>, got: <b>' + calculateSteps(mockArray4) +'</b><br/>';
   assertElement.innerHTML += 'Expected: <b>'+ mockResult5 +'</b>, got: <b>' + calculateSteps(mockArray5) +'</b><br/>';
+  assertElement.innerHTML += 'Expected: <b>'+ mockResult6 +'</b>, got: <b>' + calculateSteps(mockArray6) +'</b><br/>';
+  assertElement.innerHTML += 'Expected: <b>'+ mockResult7 +'</b>, got: <b>' + calculateSteps(mockArray7) +'</b><br/>';
 
   var correctElement = document.querySelector('.correct pre');
   correctElement.innerHTML += Array.isArray(generateArray(100, 5)) + '<br/>';
@@ -41,6 +49,8 @@ function onReady() {
   correctElement.innerHTML += (JSON.stringify(mockResult3) === JSON.stringify(calculateSteps(mockArray3))) + '<br/>';
   correctElement.innerHTML += (JSON.stringify(mockResult4) === JSON.stringify(calculateSteps(mockArray4))) + '<br/>';
   correctElement.innerHTML += (JSON.stringify(mockResult5) === JSON.stringify(calculateSteps(mockArray5))) + '<br/>';
+  correctElement.innerHTML += (JSON.stringify(mockResult6) === JSON.stringify(calculateSteps(mockArray6))) + '<br/>';
+  correctElement.innerHTML += (JSON.stringify(mockResult7) === JSON.stringify(calculateSteps(mockArray7))) + '<br/>';
 
 }
 
