@@ -5,7 +5,7 @@ Két javascript függvényt kell implementálni a ./script/script.js fájlban:
 A *generateArray(count, max)* függvény két paramétert fogad, és egy olyan tömböt fog visszaadni, amiben count darabszámú random egész szám van,
 amelyek mindegyike 1 és max közé esik
 
-A *calculateSteps(arr)* függvény egy az előbb deffiniált függvény által generált tömböt kap paraméterként, és visszaad egy tömböt a következők szerint:
+A *calculateSteps(arr)* függvény egy az előbb definiált függvény által generált tömböt kap paraméterként, és visszaad egy tömböt a következők szerint:
     
     - A visszaadott tömbben a paraméterként kapott tömb bizonyos indexei szerepelnek
     - Az arr tömbbön a lehető legkevesebb ugrással kell végigmenni úgy, hogy mindig maximum akkorát lehet ugrani, mint amilyen számon éppen állunk. Kevesebbet lehet ugrani, ha megéri. a cél, hogy minél előbb eljussunk a tömb végére.
